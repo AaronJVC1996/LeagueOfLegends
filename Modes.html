@@ -7,7 +7,7 @@
     <style>
 body{
     background-image: url('rivenfotofondoMapas.jpg');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-color: #f0f0f0;  
 }
@@ -114,9 +114,9 @@ footer {
     color: purple;
 }
 .imagenMitad img {
-    width: 800px;
+    width: 100%;
     border-radius: 10px;
-    height: 200px;
+    height: 100%;
 }
 .contenedor-flex {
     display: flex;
@@ -125,9 +125,102 @@ footer {
     width: 50%; 
     margin: 20px 0 20px 20px;
 }
+.imagenMitad {
+    position: relative; /* Asegura que los elementos absolutos se posicionen relativamente a este contenedor */
+}
+.texto-superpuesto {
+    position: absolute; /* Posición absoluta para superponer el texto */
+    bottom: 10px; /* Alinea el texto 10px desde la parte inferior */
+    left: 50%; /* Lo centra horizontalmente */
+    transform: translateX(-50%); /* Lo centra horizontalmente */
+    color: orange;
+    padding: 10px;
+    text-align: center;
+    width: 80%; /* Hace que el texto ocupe el 80% del ancho del contenedor */
+    max-width: 300px; /* Ancho máximo del contenedor del texto */
+    opacity: 0.7;
+}
+#navBar {
+  background-color: rgb(0, 0, 0);
+  height: 70px;
+  margin-top: 0px;
+  padding-top: 0px;
+  border-top: 0px;
+  top: 0px;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Align items horizontally in the center */
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  /* Add margin to separate list items */
+}
+
+li a {
+  margin: 0 20px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 24px;
+}
+
+li a:hover {
+  background-color: #111;
+  color: rgb(83, 58, 211);
+}li img{
+  display: inline;
+  color: white;
+  text-decoration: none;
+  height: 49px;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: contain; /* Cambiar a "contain" para adaptar mejor a pantallas pequeñas */
+    }
+
+    .rectangulo, .rectangulo1, .rectangulo2, .rectangulo3 {
+        width: 90%; /* Ajustar el ancho para pantallas pequeñas */
+    }
+
+    .rectangulo {
+        font-size: 24px; /* Reducir el tamaño de la fuente para pantallas pequeñas */
+    }
+
+    .imagenMitad img {
+        width: 100%; /* Ajustar el ancho de la imagen al ancho de la pantalla */
+        height: auto; /* Altura automática para mantener la proporción */
+    }
+
+    .contenedor-flex {
+        flex-direction: column; /* Cambiar la dirección del flexbox para apilar elementos */
+    }
+
+    .rectangulo2, .imagenMitad {
+        width: 100%; /* Ancho completo para pantallas pequeñas */
+        margin: 20px 0; /* Ajustar el margen para pantallas pequeñas */
+    }
+}
     </style>
 </head>
 <body>
+    <ul id="navBar">
+        <li><img class="logoimg" src="AFA_Logo.png" alt="AFA_Logo"></li>
+        <li><a href="Index.html">HOME</a></li>
+        <li><a href="Modes.html">MODES</a></li>
+        <li><a href="Champions.html">CHAMPIONS</a></li>
+        <li><a href="Skins.html">SKINS</a></li>
+        <li><a href="Competitive.html">COMPETITIVE</a></li>
+        <li><a href="Contact.html">CONTACT</a></li>
+    </ul>
 <hr/>
 <div class="imagenContainer"> <image src="fotoModos.png" alt="fotoModosAlt" width="80%" height="350"></image></div>
 <hr/>
@@ -139,7 +232,7 @@ footer {
             It offers a variety of game modes, each with its own focus and dynamics.<br/>
             Here I'll mention some of the most prominent game modes:
         </p>
-    </div>
+    </div> 
     <br/>
     <hr/>
     <br/>
@@ -152,7 +245,11 @@ footer {
             </p>
         </div>
         <div class="imagenMitad">
-            <image src="5vs5Map.jpg" alt="fotoModosAlt" width="80%" height="350"></image>
+            <img src="5vs5Map.jpg" alt="fotoModosAlt" width="80%" height="350">
+            <div class="texto-superpuesto">
+                <p>This map is used in more than one game mode, is the most popular map</p>
+            </div>
+           
         </div>
     </div>
     
@@ -169,6 +266,9 @@ footer {
         </p>
     </div>
     <div class="imagenMitad">
+        <div class="texto-superpuesto">
+            <p>There is only one line to attack or defend, all players face each other in a single line <br/> This mode charmed people who did not want to play very long games</p>
+        </div>
         <image src="AramMap.jpg" alt="fotoModosAlt" width="80%" height="350"></image>
     </div>
     </div>
@@ -184,6 +284,9 @@ footer {
         </p>
     </div>
     <div class="imagenMitad">
+        <div class="texto-superpuesto">
+            <p>This game mode is the oldest, people usually play it more than anything out of nostalgia.</p>
+        </div>
         <image src="TwistedTreeLine.jpg" alt="fotoModosAlt" width="80%" height="350"></image>
     </div>
     </div>
@@ -199,6 +302,9 @@ footer {
         </p>
     </div>
     <div class="imagenMitad">
+        <div class="texto-superpuesto">
+            <p>This game mode is not always available, they activate it eventually</p>
+        </div>
         <image src="URF.jpg " alt="fotoModosAlt" width="80%" height="350"></image>
     </div>
     </div>
@@ -214,7 +320,10 @@ footer {
         </p>
     </div>
     <div class="imagenMitad">
-        <image src="TrainingMode.jpg" alt="fotoModosAlt" width="80%" height="350"></image>
+        <div class="texto-superpuesto">
+            <p>In this game mode you tend to practice combos, damage calculations, strategies, etc (Map 5vs5)</p>
+        </div>
+        <image src="TrainingMode.jpg" alt="fotoModosAlt" width="80%" height="350px"></image>
     </div>
     </div>
 <br/>
