@@ -138,7 +138,41 @@ footer {
     text-align: center;
     width: 80%; /* Hace que el texto ocupe el 80% del ancho del contenedor */
     max-width: 300px; /* Ancho máximo del contenedor del texto */
-    opacity: 0.7;
+}
+.texto-superpuestoazul {
+    position: absolute; /* Posición absoluta para superponer el texto */
+    bottom: 10px; /* Alinea el texto 10px desde la parte inferior */
+    left: 50%; /* Lo centra horizontalmente */
+    transform: translateX(-50%); /* Lo centra horizontalmente */
+    color: blue;
+    padding: 10px;
+    text-align: center;
+    width: 80%; /* Hace que el text o ocupe el 80% del ancho del contenedor */
+    max-width: 300px; /* Ancho máximo del contenedor del texto */
+}
+.imagen-container1 {
+    display: flex;
+    justify-content: space-between; /* Alinear las imágenes a lo largo de la línea */
+    position: relative; /* Asegurar que el contenedor de la imagen tenga posición relativa */
+    padding-left: 6% ;
+}
+
+.imagenMitad1 {
+    width: 30%; /* Ajustar el ancho de cada imagen */
+    position: relative; /* Asegurar que el contenedor de la imagen tenga posición relativa */
+}
+
+.texto-superpuesto1 {
+    position: absolute;
+    bottom: 10px;
+    left: 7%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 60%;
+    color:darkorange;
+    text-align: center;
 }
 #navBar {
   background-color: rgb(0, 0, 0);
@@ -184,6 +218,7 @@ li a:hover {
 }
 @media only screen and (max-width: 600px) {
     body {
+        font-size: 8px;
         background-size: contain; /* Cambiar a "contain" para adaptar mejor a pantallas pequeñas */
     }
 
@@ -203,11 +238,35 @@ li a:hover {
     .contenedor-flex {
         flex-direction: column; /* Cambiar la dirección del flexbox para apilar elementos */
     }
+    .imagen-container1 {
+        flex-direction: column; /* Cambiar la dirección del flexbox para apilar elementos */
+    }
 
     .rectangulo2, .imagenMitad {
         width: 100%; /* Ancho completo para pantallas pequeñas */
         margin: 20px 0; /* Ajustar el margen para pantallas pequeñas */
     }
+    .imagenMitad1 {
+        width: 100%; /* Ancho completo para una imagen por fila en teléfonos */
+    }
+    .texto-superpuesto1 {
+    width: 60%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .imagenMitad1 {
+        width: 45%; /* Ajustar el ancho para que haya dos imágenes por fila en tabletas */
+        margin-bottom: 20px; /* Agregar un margen inferior para separar las filas */
+    }
+    .imagen-container1 {
+        display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en múltiples líneas */
+    justify-content: space-between; /* Alinear los elementos alrededor del contenedor */
+}
+.texto-superpuesto1 {
+    width: 60%;
+    }
+    
 }
     </style>
 </head>
@@ -320,7 +379,7 @@ li a:hover {
         </p>
     </div>
     <div class="imagenMitad">
-        <div class="texto-superpuesto">
+        <div class="texto-superpuestoazul">
             <p>In this game mode you tend to practice combos, damage calculations, strategies, etc (Map 5vs5)</p>
         </div>
         <image src="TrainingMode.jpg" alt="fotoModosAlt" width="80%" height="350px"></image>
@@ -329,6 +388,29 @@ li a:hover {
 <br/>
     <hr/>
     <br/>
+    <div class="imagen-container1">
+        <div class="imagenMitad1">
+            <div class="texto-superpuesto1">
+                <p>Killing Baron Nashor grants Hand of Baron Hand of Baron to all living teammates for 180 seconds, which grants Attack damage and Ability power</p>
+            </div>
+            <image src="Nashor.jpg" alt="fotoModosAlt" width="80%" height="350px"></image>
+        </div>
+        <div class="imagenMitad1">
+            <div class="texto-superpuesto1">
+                <p>The Dragon is the second most powerful neutral monster on Summoner's Rift in League of Legends. Killing a Dragon grants the entire team the Dragon Slayer effect.</p>
+            </div>
+            <image src="Dragon.jpg" alt="fotoModosAlt" width="80%" height="350px"></image>
+        </div>
+   
+    
+        <div class="imagenMitad1">
+            <div class="texto-superpuesto1">
+                <p>Vilemaw was the most powerful neutral Monster icon monster on Twisted Treeline icon Twisted Treeline. It served a similar role to the Nashor.
+                    </p>
+            </div>
+            <image src="Vilemaw.jpg" alt="fotoModosAlt" width="80%" height="350px"></image>
+        </div>
+    </div>
     <div class="rectangulo3">   
         <p>
             These are just some of the game modes offered by League of Legends.<br/>
