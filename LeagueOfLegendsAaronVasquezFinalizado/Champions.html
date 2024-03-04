@@ -1,0 +1,300 @@
+/* Aaron Vasquez */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champions AFA-World</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    color: rgb(250, 243, 243);
+    font-size: 16px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    body::before { /*antes del contenido del body*/
+    content: ""; /*se declara como una cadena vacia, no agregará contenido visible, pero aún así permitirá aplicar estilos adicionales*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca el elemento detrás del contenido */
+    background-image: url('Campeones.jpg');
+    background-size: cover;
+    filter: blur(5px); /* Aplica un desenfoque de 5px */
+    }
+    #navBar {
+  position: fixed;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+}
+li a {
+  margin: 0 20px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 24px;
+}
+li a:hover {
+  background-color: #111;
+  color: rgb(83, 58, 211);
+}
+li a.active {
+  background-color: #111;
+  color: rgb(83, 58, 211);
+}
+li img {
+  display: inline;
+  color: white;
+  text-decoration: none;
+  height: 49px;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+footer {
+    position: relative;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    clear: both; /* Asegura que el footer no se solape con los elementos anteriores */
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.footer-links {
+    margin-top: 10px;
+}
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-links ul li {
+    display: inline;
+    margin-right: 10px;
+}
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    transition: border-color 0.3s ease;
+}
+.footer-links ul li a:hover {
+    color: purple;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.image-fist {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1, h2, h3, p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+hr{border-color: rgb(9, 82, 116); border-width: 5px;}
+h1{color:rgb(224, 193, 168); font-style: italic; text-decoration: underline;}
+.color1{color:rgb(224, 193, 168);}
+h2{color:orange;}
+.color2{color:orange;}
+h3{color: yellow;}
+.color3{color: yellow;}
+.container {
+    max-width: 800px;
+    margin: 100px auto 20px; /* Añade un margen superior de 100px */
+    padding: 20px;
+    position: relative; 
+}
+ @media only screen and (max-width: 600px) {
+.container {
+padding: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <ul id="navBar">
+        <li><img class="logoimg" src="AFA_Logo.png" alt="AFA_Logo"></li>
+        <li><a href="Index.html">HOME</a></li>
+        <li><a href="Modes.html">MODES</a></li>
+        <li><a href="Champions.html" class="active">CHAMPIONS</a></li>
+        <li><a href="Skins.html">SKINS</a></li>
+        <li><a href="Competitive.html">COMPETITIVE</a></li>
+        <li><a href="Contact.html">CONTACT</a></li>
+    </ul>
+    <div class="container">
+
+        <h1>Types of champions</h1>
+        <p class="color1">Every champion in League of Legends has an assigned class. Classes and their interactions with one another influence gameplay pacing and decisions.</p>
+        <p class="color1">The available classes are as follows:</p>
+        <p class="color1">Marksman<br>
+        Controller = Catcher, Enchanter<br>
+        Fighter = Diver, Juggernaut<br>
+        Mage = Artillery, Battlemage, Burst<br>
+        Slayer = Assassin, Skirmisher<br>
+        Tank = Vanguard, Warden<br>
+        Specialist (or Unclassified)</p>
+        <img src="TiposCampeones.jpg" alt="TiposCampeonesalt">
+        <hr>
+        
+        <h2>Marksman</h2>
+        <p class="color2">Marksmen are ranged champions whose power almost exclusively revolves around their basic attacks: using their reach to land massive continuous damage from a distance, 
+            marksmen are capable of taking down even the toughest of opponents when positioned behind the safety of their team, and excel at securing map objectives such as Dragon, 
+            Baron Nashor and turrets</p>
+        <p class="color2">Due to their potent reach and DPS, marksmen are particularly strong against more durable opponents, namely fighters and tanks, but fall quickly to the burst damage of assassins and mages</p><br>
+        <img src="AsheRender.jpg" alt="AsheRenderalt" class="image-fist">
+        <hr>
+
+        <h2>Controller</h2>
+        <p class="color2">Controllers assist their allies with potent utility and keep enemies at bay with crowd control. Weak when alone, supports are capable of massively 
+            amplifying their teammates' power to become the strongest class in group combat (or teamfights), supplying crucial utility or crowd control at clutch 
+            moments to save allies from death and enable takedowns on the enemy team</p>
+        <p class="color2">Supports typically start out by assisting the marksman in lane, as their own power is less dependent on items to function well, 
+            but over time their contribution expands as they lend aid to their entire team with both their spells and effective, yet affordable, 
+            items. Sub-classes of Controllers are enchanters and catchers</p><br/>
+                <h3>Catchers</h3>
+                <p class="color3">Catchers specialize in locking down opponents or, in some cases, entire battlefields by creating intense zones of threat that only foolish 
+                    enemies would dare wade through. Although not as reliant on their friends as Enchanters, the fragile Catchers greatly benefit from allied presence - both 
+                    to deter incoming danger and to help capitalize on targets they've locked down<p>
+                <img src="BardRender.jpg" alt="BardRenderalt" class="image-fist"><br/><br/><br/><br/><br/>
+                <h3>Enchanters</h3>
+                <p class="color3">Enchanters focus on amplifying their allies' effectiveness by directly augmenting them and defending them from incoming threats. 
+                    Enchanters themselves are often quite fragile and bring relatively low damage to the table, meaning they really only shine when grouped together with others</p>
+                    <img src="JannaRender.jpg" alt="JannaRenderalt" class="image-fist">
+        <br/><br/><br/><hr>
+
+        <h2>Fighter</h2>
+        <p class="color2">Fighters (also known as Bruisers) are a diverse group of short-ranged combatants who excel at both dealing and surviving damage. 
+            With easy access to heavy, continuous damage (or DPS) and a host of innate defenses, fighters thrive in extended fights as they seek out enemies to take down, 
+            but their limited range puts them at constant risk of being kept at bay (or kited) by their opponents via crowd control, range and mobility</p>
+        <p class="color2">Fighters tend to have an advantage against assassins, whose burst tends to fall short of killing them when unaided,
+             as well as tanks, whose inferior damage allows fighters to eventually defeat them in duels, but often struggle against mages and marksmen, 
+             whose superior reach allows them to kite approaching fighters. Sub-classes of the Fighters are juggernauts, and divers</p><br/>
+                <h3>Divers</h3>
+                <p class="color3">Divers are the more mobile portion of the Fighter class. Divers excel at singling out high-priority targets to blitz toward, 
+                    immediately forcing those targets (and their teammates) to deal with the diver’s presence. Divers are not as durable as the tanks 
+                    or juggernauts of the world, but Divers can take their fair share of punishment while bringing enough damage to be a real kill threat if left unchecked<p>
+                <img src="JarvanIVRender.jpg" alt="JarvanIVRenderalt" class="image-fist"><br/><br/><br/><br/><br/>
+                <h3>Juggernauts</h3>
+                <p class="color3">Juggernauts are melee titans who relentlessly march down the opposition and devastate those foolish enough to get within their grasp. 
+                    They are the only subclass who excel at both dealing and taking significant amounts of damage, but in turn they have a tough time closing in 
+                    on targets due to their low range and extremely limited mobility</p>
+                    <img src="IllaoiRender.jpg" alt="IllaoiRenderalt" class="image-fist">
+        <br/><br/><br/><hr>
+
+        <h2>Mage</h2>
+        <p class="color2">Mages are champions who typically possess great reach, ability-based area of effect damage and crowd control, and who use all of these strengths 
+            in tandem with each other to trap and destroy enemies from a distance. Specializing in magic damage, often burst damage, and therefore investing 
+            heavily in items that allow them to cast stronger and faster spells, mages excel at chaining their abilities together in powerful combos in order 
+            to win fights, though their abilities also tend to be difficult to land and can be mitigated, if not avoided completely, by their targets if they react in time</p>
+        <p class="color2">Though mages tend to focus on killing prime targets in combat, they can also fall back to their innate crowd control and utility to manipulate key opponents, 
+            protecting their team from them or setting them up for a takedown, and in the right circumstances can damage and control multiple enemies at a time. 
+            In spite of the influence they exert, mages tend to be innately fragile, and fall quickly to direct strikes</p>
+        <p class="color2">In general, mages are capable of dealing well with marksmen, as their burst can kill them before they can return the same amount of damage, and fighters, 
+            as their crowd control tends to make them excellent kiters. However, they are easily shut down by assassins who can often bypass their reach and spells completely, 
+            and tanks, who can lock them down and soak up their abilities better than other classes. Sub-classes of Mages are burst, battle, and artillery Mages</p><br/>
+        <h3>Artillery</h3>
+                <p class="color3">Artillery Mages are the masters of range, and they leverage that advantage to whittle down their opponents over time from great distances. 
+                    In turn, Artillery Mages are severely punished when enemies finally succeed in closing in on them, due to their extreme fragility and limited mobility<p>
+                <img src="VelkozRender.jpg" alt="VelkozRenderalt" class="image-fist"><br/><br/><br/><br/><br/>
+                <h3>Battlemages</h3>
+                <p class="color3">Battlemages (also known as Warlocks) get into the middle of the fray, seeking to wreak havoc upon the entire enemy team with their overwhelming 
+                    sustained area damage. Due to their relatively short (but not melee) combat ranges and the need to burn down their opponents over time, Battle Mages 
+                    have significant defensive capabilities that range from sustaining endlessly to literally defying death for a short period of time</p>
+                    <img src="VladimirRender.jpg" alt="VladimirRenderalt" class="image-fist"><br/><br/><br/><br/><br/>
+                    <h3>Burst</h3>
+                <p class="color3">Burst Mages aim to single out vulnerable targets by locking them down and following up with a devastating barrage of damage from range. 
+                    They are strongest when using their full suite of spells executed perfectly to maximum effect, and most vulnerable when they cannot deliver</p>
+                    <img src="SyndraRender.jpg" alt="SyndraRenderalt" class="image-fist">
+        <br/><br/><br/><hr>
+
+        <h2>Slayer</h2>
+        <p class="color2">Slayers are highly mobile champions who specialize in single target burst damage. What they generally lack in resilience, they more than make up for with 
+            their ability to quickly cover large distances, kill priority targets and retreat just as fast. Epitomizing a high risk, high reward playstyle, assassins 
+            are natural opportunists and prefer to strike when their targets are alone and vulnerable, rather than engage them in a direct assault, 
+            favoring damage-oriented item builds to capitalize on their offensive capabilities</p>
+        <p class="color2">They're particularly effective against softer (or squishy) targets, especially mages and marksmen, but often struggle against the heightened defenses of 
+            fighters and tanks. Subclasses of Slayers are assassins and skirmishers</p><br/>
+                <h3>Assassins</h3>
+                <p class="color3">Assassins specialize in infiltrating enemy lines with their unrivaled mobility to quickly dispatch high-priority targets. 
+                    Due to their mostly melee nature, Assassins must put themselves into dangerous positions in order to execute their targets. 
+                    Luckily, they often have defensive tricks up their sleeves that, if used cleverly, allow them to effectively avoid incoming damage<p>
+                <img src="TalonRender.jpg" alt="TalonRenderalt" class="image-fist"><br/><br/><br/><br/><br/>
+                <h3>Skirmishers</h3>
+                <p class="color3">Skirmishers (also known as Duelists) aim to shred through any nearby enemy that approaches. Because Skirmishers lack high-end burst damage 
+                    or reliable ways of closing in on high-priority targets, they are instead armed with situationally powerful defensive tools to survive in the fray, 
+                    along with extreme sustained damage to cut down even the most durable targets</p>
+                    <img src="JaxRender.jpg" alt="JaxRenderalt" class="image-fist">
+        <br/><br/><br/><hr>
+
+        <h2>Tank</h2>
+        <p class="color2">Tanks are tough melee champions who sacrifice damage in exchange for powerful crowd control. While able to engage enemies in combat, a tank's purpose 
+            isn't usually to kill opponents; rather, tanks excel at disrupting enemies and diverting focus to themselves, allowing them to lock down specific targets 
+            (or several targets at once), as well as remove (or peel) threats from their allies</p>
+        <p class="color2">In addition to strong base defenses, tanks generally have a means of amplifying their tankiness even further with their abilities, and tend 
+            to fully invest in defensive items to maximize their resilience. However, tanks lack the tools to truly succeed in single combat, and their 
+            influence is limited by their low overall mobility, preventing them from constantly staying on top of their targets</p>
+        <p class="color2">As tanks can handle burst damage very well, they tend to succeed against assassins and most mages, but their vulnerability to continuous damage 
+            puts them at a disadvantage against fighters and marksmen. Subcategories of Tanks are vanguards, and wardens</p><br/>
+                <h3>Vanguards</h3>
+                <p class="color3">Vanguards are offensive tanks. Vanguards lead the charge for their team and specialize at bringing the action. 
+                    Their explosive team fight initiation seeks to catch enemies out of position while allowing allies to follow-up to devastating effect<p>
+                <img src="LeonaRender.jpg" alt="LeonaRenderalt" class="image-fist"><br/><br/><br/><br/><br/>
+                <h3>Wardens</h3>
+                <p class="color3">Wardens are defensive tanks. Wardens stand steadfast, seeking to hold the line by persistently locking down any on-comers who try to pass them. 
+                    Wardens keep their allies out of harm’s way and allow them to safely deal with enemies caught in the fray</p>
+                    <img src="TaricRender.jpg" alt="TaricRenderalt" class="image-fist">
+        <br/><br/><br/><hr>
+
+        <h2>Specialist (or Unclassified)</h2>
+        <p class="color2">Specialists are a diverse group of champions who do not "fit into a neat little box" in regards to other class/subclass specifications. The majority of these 
+            champions were once part of other sub-classes but were reclassified in the V7.10 update, including a large number of champions from the former Zoner subclass 
+            of Controller. As a consequence, many Specialists exhibit "zone control" either as a dominant or secondary attribute, including many of the pre-7.10 Specialists</p>
+        <p class="color2">A Zone Controller is a champion whose influence is limited either to telegraphed zones—such as Azir's Soldiers and Time Bomb—or a persistent threat that is 
+            dependent on cooldown knowledge—such as Feast, Chronoshift or Crowstorm. The latter type of Zone Controller is comparable in their psychological threat to 
+            a Juggernaut, except that this threat largely diminishes once the problematic ability is known to be on cooldown</p><br/>
+                <img src="AzirRender.jpg" alt="AzirRenderalt" class="image-fist">
+        <br/><br/><br/><hr>
+    </div>
+</body>
+<footer>
+    <div class="footer-content">
+        <div class="footer-text">
+            <p>AFA &copy; 2024. All rights reserved. Address: 666, Pamplona, Spain. Email: AFA@hotmail.com | Phone: +34-666-777-666</p>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="/sitemap">Sitemap</a></li>
+                <li><a href="/cookies-policy">Cookies Policy</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</html>
