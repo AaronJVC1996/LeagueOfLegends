@@ -9,7 +9,9 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            color: white;
+            color: rgb(241, 23, 23);
+            font-size: 16px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         /* Contenedor para la imagen de fondo */
@@ -30,7 +32,13 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            position: relative; /* Asegura que el contenido esté por encima de la imagen de fondo */
+            position: relative; 
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
         }
 
         .image-fist {
@@ -39,6 +47,7 @@
             display: block;
             margin-bottom: 20px;
         }
+
 
         h1, h2, p {
             text-align: center;
