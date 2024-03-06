@@ -1,0 +1,96 @@
+#navBar {
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  padding: 0.25rem;
+}
+
+.logoimg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.logoContainer {
+  width: 5%;
+  padding: 16px;
+  border-radius: 100%;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+}
+
+li a {
+  margin: 0 20px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 24px;
+}
+
+li a:hover {
+  background-color: #111;
+  color: rgb(83, 58, 211);
+}
+
+li img {
+  display: inline;
+  color: white;
+  text-decoration: none;
+  height: 49px;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+li a.active {
+  background-color: #111;
+  color: rgb(83, 58, 211);
+}
+
+#menuToggle {
+  display: none; /* Ocultar checkbox */
+}
+
+.menuIcon {
+  display: none; /* Inicialmente oculto para escritorio */
+  font-size: 30px; /* Tamaño del icono de hamburguesa */
+  cursor: pointer;
+}
+
+#menuToggle:checked + .menuIcon + div ul {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .menuIcon {
+    display: inline-block; /* Mostrar icono de hamburguesa en móviles */
+  }
+
+  #navList {
+    display: none; /* Ocultar menú por defecto en móviles */
+    width: 100%; /* Asegurar que el menú ocupe todo el ancho */
+  }
+
+  #navList li {
+    display: block; /* Los elementos del menú se muestran en bloque (uno debajo del otro) */
+    text-align: center; /* Centrar los enlaces */
+  }
+
+  #navBar {
+    flex-direction: column; /* Acomodar elementos del nav en columna */
+    padding: 0;
+  }
+
+  .logoContainer {
+    text-align: center; /* Centrar logo */
+  }
+}
